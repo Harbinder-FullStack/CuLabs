@@ -11,13 +11,16 @@
 
   <form action="#" method="post">
     <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name" required minlength="3" placeholder="Enter your full name">
+    <input type="text" id="name" name="name" placeholder="Enter your full name"
+    required="required" pattern="[A-Za-z\s_]+" minlength="3" maxlength="20" >
 
     <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" required placeholder="example@domain.com">
+    <input type="email" id="email" name="email" placeholder="example@domain.com" 
+    required >
 
     <label for="age">Age:</label>
-    <input type="number" id="age" name="age" required min="5" max="100" placeholder="Enter your age">
+    <input type="number" id="age" name="age" placeholder="Enter your age" 
+    required min="5" max="100" >
 
     <input type="submit" value="Register">
   </form>
