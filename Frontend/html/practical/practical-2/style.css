@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 body {
+  /* border: 1px solid black; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f3f4f6;
   display: flex;
@@ -15,6 +16,7 @@ body {
 
 /* Container */
 .bank-container {
+  /* border: 1px solid rgb(196, 13, 13); */
   width: 100%;
   max-width: 400px;
   padding: 20px;
@@ -22,15 +24,17 @@ body {
 
 /* Card */
 .bank-card {
+  /* border: 1px solid rgb(13, 16, 216); */
   background-color: #ffffff;
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(214, 28, 28, 0.1);
   text-align: center;
 }
 
 /* Balance Box */
 .balance-box {
+  /* border: 1px solid rgb(13, 16, 216); */
   margin: 20px 0;
   padding: 20px;
   /*border: 2px dashed #38bdf8;
@@ -49,6 +53,7 @@ body {
 
 /* Buttons */
 .actions {
+  /* border: 1px solid rgb(13, 16, 216); */
   display: flex;
   justify-content: space-between;
   gap: 15px;
@@ -82,3 +87,4 @@ body {
     flex-direction: column;
   }
 }
+
