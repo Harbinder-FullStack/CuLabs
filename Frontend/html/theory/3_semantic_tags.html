@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr;
+            grid-template-rows: 100px 100px 1fr 70px;
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "main main main"
+                "footer footer footer";
+            gap: 10px;
+
+        }
+        header{
+            grid-area: header;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            padding: 10px;
+        }
+        nav {
+            grid-area: nav;
+        }
+        main {
+            grid-area: main;
+        }
+        footer {
+            grid-area: footer;
+        }
+        button {
+            background-color: cyan;
+            color: black;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="container">
+    <header style="background-color: rgba(203, 194, 191, 0.641);">
+        <h1>Welcome</h1>
+        <button type="text" >Login</button>
+        <img src="https://lms.cuchd.in/pluginfile.php/1/theme_moove/logo/1752766260/cu.png" alt="Chandigarh University Logo" 
+                style="width: 50px; height: 20px; vertical-align: middle;">
+    </header>
+    <nav style="background-color: rgb(209, 68, 29);">
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main style="background-color: rgb(118, 106, 206);">
+        <aside style="border: 2px solid black; width:150px; float: left;">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>   
+        </aside>
+        <section style="border: 2px solid black; width:150px; float: left;">
+            <h2>Main Content</h2>
+            <p>This is the main content area where you can add your text, images, and other elements.</p>
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image" style="width: 100%; height: auto;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut </p>    
+        </section>        
+        <article style="border: 2px solid black; width:150px; float: left;">
+            <h2>Article Section</h2>
+            <p>This is an article section where you can write about a specific topic.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+    </main>
+    <footer style="background-color: rgba(161, 151, 148, 0.488);">    
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:"></a></p>   
+    </footer>       
+</body>
+</html>

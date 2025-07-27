@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Basics</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+    section { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    h2 { border-bottom: 1px solid #ccc; }
+    button { margin-top: 10px; padding: 6px 12px; }
+    pre { background: #eee; padding: 10px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 JavaScript Basics Demo</h1>
+
+  <section>
+    <h2>1. Data Types</h2>
+    <pre id="types-output"></pre>
+    <script>
+      let typesOutput = '';
+      const types = {
+        string: "Alice",
+        number: 42,
+        boolean: true,
+        nullValue: null,
+        undefinedValue: undefined,
+        object: {
+              name: "Bob",
+              age: 30,
+              hobbies : [
+                "reading", "gaming",
+              ],
+              makrs 
+            },
+        array: [1, 2, 3]
+      };
+      for (let key in types) {
+        typesOutput += "${key}: ${typeof types[key]}\n";
+      }
+      document.getElementById('types-output').innerText = typesOutput;
+    </script>
+  </section>
+
+  <section>
+    <h2>2. Functions</h2>
+    <pre id="functions-output"></pre>
+    <script>
+      function greet(name) {
+        return "Hello, " + name;
+      }
+      function add(a, b) {
+        return a + b;
+      }
+      const add = (a, b) => a + b;
+      document.getElementById('functions-output').innerText = greet("Alice") + "\n" + "3 + 5 = " + add(3, 5);
+    </script>
+  </section>
+
+  <section>
+    <h2>3. Callbacks</h2>
+    <button onclick="runCallback()">Run Callback</button>
+    <pre id="callback-output"></pre>
+    <script>
+      function runCallback() {
+        function callbackExample() {
+          document.getElementById('callback-output').innerText = "Callback executed!";
+        }
+
+        function doSomething(name, cb) {
+          document.getElementById('callback-output').innerText = "Hello " + name;
+          setTimeout(cb, 1000); // Call callback after 1 second
+        }
+
+        doSomething("Alice", callbackExample);
+      }
+    </script>
+  </section>
+
+  <section>
+    <h2>4. Event Handling</h2>
+    <p id="event-msg">Click the button!</p>
+    <button id="event-btn">Click Me</button>
+    <script>
+      document.getElementById("event-btn").addEventListener("click", () => {
+        document.getElementById("event-msg").innerText = "🎉 Button Clicked!";
+      });
+    </script>
+  </section>
+
+  <section>
+    <h2>5. Conditional & Loops</h2>
+    <pre id="condition-output"></pre>
+    <script>
+      let result = "";
+      let score = 78;
+      result += score >= 90 ? "Grade: A\n" : "Keep improving!\n";
+      for (let i = 1; i <= 3; i++) {
+        result += "Loop i = " + i + "\n";
+      }
+      document.getElementById("condition-output").innerText = result;
+    </script>
+  </section>
+
+  <section>
+    <h2>6. DOM Manipulation</h2>
+    <p id="demo-text">Original Text</p>
+    <button onclick="changeText()">Change Text</button>
+    <script>
+      function changeText() {
+        document.getElementById("demo-text").innerText = "Text changed by JavaScript!";
+      }
+    </script>
+  </section>
+
+  <section>
+    <h2>7. Timers (setTimeout & setInterval)</h2>
+    <button onclick="startTimer()">Start Timer</button>
+    <pre id="timer-output"></pre>
+    <script>
+      function startTimer() {
+        let count = 0;
+        const output = document.getElementById("timer-output");
+        output.innerText = "Starting...\n";
+        const interval = setInterval(() => {
+          count++;
+          output.innerText += "Tick " + count + "\n";
+          if (count === 5) {
+            output.innerText += "Stopped!";
+            clearInterval(interval);
+          }
+        }, 1000);
+      }
+    </script>
+  </section>
+
+</body>
+</html>
